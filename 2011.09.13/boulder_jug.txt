@@ -1,0 +1,70 @@
+About Adam Esterline
+
+	Adam is a developer at Rally Software with over 11 years of software development experience.   He loves taking on the "impossible" problems.   Adam recently led a great team that revived Rally's struggling nine hour Selenium test suite.    The suite now runs in under 20 minutes and is the backbone of Rally's weekly release strategy.    Adam can be found on GitHub working on various open source projects.
+	
+
+Getting the Most Value from Your Selenium Test Suite
+
+	End-to-end Selenium test suites are expensive, brittle and frustrating.   As release timeframes are compressed to a week or less, Selenium becomes an important part of a regression test safety net.    In this talk, Adam will talk about some hard learned lessons in making Selenium end-to-end tests a valuable part of a development process.
+	
+	
+Talk:
+
+* Introduction
+	* Not an expert
+	* Hope this can be more of a discussion where everyone can learn
+	
+* Who has a Selenium test suite?
+
+* Why would you want a selenium end-to-end suite?
+	* Describe situations where it is hard to ensure that it works without the end-to-end suite.
+
+* How do you decide what you tests you write in that suite?
+	* Describe how Rally decides
+	* Why is it important to be picky?
+
+* Two common problems with Selenium tests
+	* Slow/Flaky/Brittle
+	* Who has a selenium test suite that takes over 30 minutes to run?
+	* Who has a selenium test suite that is flaky?
+	* Trust - If we lose trust in the suite, they lose lots of value.
+	* Which problem do you tackle first?
+	
+* Slow tests
+	* Limit what is done in the browser
+		* Don't navigate; Go directly to the page that you are testing
+		* If not testing data creation, create data around the application
+		* Check as much as possible without looking at the browser (WSAPI)
+		
+	* More browsers on the problem
+		* Data segregation (thread boundary)
+		* Good thing... helps find concurrency issues/deadlocks in the application under test
+		* Multi-Process
+			* easier - test suite doesn't have to be thread safe
+			* allows a chance to work out threading issues in the application under test
+			* issue - bucket sizing (processes my finish too early)
+		* Multi-Threaded
+			* harder - track down threading issues in the test suite
+			* all threads working hard until the end
+			*** Side track - Many threading issues with Ruby and Selenium (net/http; rspec)
+			
+	* Perform more operations out of the test thread
+		* Data creation/segregation
+		* Logins
+		
+* Flaky tests/results
+	* waits - no sleeps; most of the time
+	* What should we wait on?
+	
+	* All AJAX requests
+		* Might need to build something to know when the requests are done.
+	* Visual clues
+		* What do we look for as humans to let us know that the application is ready for more input
+		* Demo
+		
+* Closing
+	
+	
+		
+	
+	
