@@ -10,27 +10,34 @@ Getting the Most Value from Your Selenium Test Suite
 	
 Talk:
 
-* Introduction
+* Introduction (Picture of me; Maybe Scumbag Adam; Maybe things that identify me)
 	* Not an expert
-	* Hope this can be more of a discussion where everyone can learn
+	* Hope this can be more of a discussion where everyone can learn (Some sort of discussion picture)
 	
+(Raised hands)
 * Who has a Selenium test suite?
+	* What languages are you using to write your tests?
 
 * Why would you want a selenium end-to-end suite?
 	* Describe situations where it is hard to ensure that it works without the end-to-end suite.
 
+(Picture of making a hard decision)
 * How do you decide what you tests you write in that suite?
 	* Describe how Rally decides
 	* Why is it important to be picky?
 
+(Slow and flaky picture; turtle and dandruff)
 * Two common problems with Selenium tests
 	* Slow/Flaky/Brittle
 	* Who has a selenium test suite that takes over 30 minutes to run?
 	* Who has a selenium test suite that is flaky?
-	* Trust - If we lose trust in the suite, they lose lots of value.
-	* Which problem do you tackle first?
+	* Trust - If we lose trust in the suite, they lose lots of value; constant battle - still have problems today
+	* Which problem do you tackle first? (fork in the road)
 	
 * Slow tests
+	* Why should we tackle this problem first?
+		* More runs; more chances to track down flaky tests
+		* But... can also expose more problems in the SUT.
 	* Limit what is done in the browser
 		* Don't navigate; Go directly to the page that you are testing
 		* If not testing data creation, create data around the application
