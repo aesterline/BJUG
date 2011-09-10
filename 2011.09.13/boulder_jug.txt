@@ -53,9 +53,16 @@ Talk:
 		* Logins
 		
 * Flaky tests/results
+	* DRY - One of the most important things.
+		* Why? Makes it easier to read/maintain; Easier to fix flaky classes of problems.
+		* Abstractions in tests
+			* tests should only depend on abstractions; don't use the browser
+		* Good selectors
+			* Add/change the selectors you need in order to make your tests dry (Rally has special selectors that only get added in during tests)
+
 	* waits - no sleeps; most of the time
+		* When would a sleep be a good idea? (multi-threaded vs. timing issue)
 	* What should we wait on?
-	
 	* All AJAX requests
 		* Might need to build something to know when the requests are done.
 	* Visual clues
